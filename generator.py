@@ -25,21 +25,19 @@ def generate_repos():
                     except Exception as e:
                         print(f"Ошибка чтения файла {filename}: {e}")
 
-    # Задаем красивую иконку для самого репозитория по умолчанию
     default_icon = "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/sber.png"
 
-    # 1. Сборка для Скарлет
+    # Корректная и самая простая структура для Scarlet (нижний регистр ключей)
     scarlet_repo = {
-        "Meta": {
-            "Name": "Russian App Source",
-            "Icon": default_icon
+        "meta": {
+            "name": "Sber App Source",
+            "icon": default_icon
         },
-        "Apps": {}
+        "apps": []
     }
     
-    # 2. Сборка для E-Sign
     esign_repo = {
-        "name": "Russian App Source",
+        "name": "Sber App Source",
         "identifier": "com.sberappsource.repo",
         "description": "Магазин приложений для iOS",
         "apps": []
@@ -50,25 +48,21 @@ def generate_repos():
         bundle = clean_value(app.get("bundle_identifier", "ru.sberbank.sberbankonline"))
         version = clean_value(app.get("version", "15.7.0"))
         down = clean_value(app.get("download_url", ""))
-        
-        # Если у приложения нет иконки, ставим дефолтную
-        icon = clean_value(app.get("icon_url", ""))
-        if not icon:
-            icon = default_icon
-            
+        icon = clean_value(app.get("icon_url", "")) or default_icon
         desc = clean_value(app.get("description", ""))
 
-        # Пишем в Скарлет
-        scarlet_repo["Apps"][name] = {
-            "BundleID": bundle,
-            "Version": version,
-            "Download": down,
-            "Icon": icon,
-            "Developer": "SberAppSource",
-            "Description": desc
-        }
+        # Для Scarlet (в массив)
+        scarlet_repo["apps"].append({
+            "name": name,
+            "bundleID": bundle,
+            "version": version,
+            "download": down,
+            "icon": icon,
+            "developer": "Sber",
+            "description": desc
+        })
 
-        # Пишем в E-Sign
+        # Для E-Sign
         esign_repo["apps"].append({
             "name": name,
             "version": version,
