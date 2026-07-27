@@ -5,7 +5,7 @@
             "name": "Т-Банк",
             "bundle": "com.tbank.iphone",
             "version": "15.0.0",
-            "down": "https://ссылка-на-твое-облако.com/tbank.ipa",
+            "down": "https://github.com/youdontknow1/RussianAppSource/releases/download/v1/Online_17.6.1.ipa",
             "icon": "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/tbank.png",
             "ver": "15.0.0",
             "desc": "Официальное приложение Т-Банка для iOS. Актуальная сборка."
