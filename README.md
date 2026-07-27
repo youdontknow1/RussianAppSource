@@ -1,2 +1,0 @@
-# RussianAppSource
-RussianAppSource
