@@ -6,7 +6,6 @@ def generate_repos():
     apps = []
     metadata_dir = 'metadata'
     
-    # Собираем данные из всех .yml файлов в папке metadata
     if os.path.exists(metadata_dir):
         for filename in os.listdir(metadata_dir):
             if filename.endswith('.yml') or filename.endswith('.yaml'):
@@ -52,19 +51,15 @@ def generate_repos():
             "Description": app.get("description")
         }
 
-    # 3. Формат ESign (esign.json)
-    esign_repo = {
-        "name": "Russian App Source",
-        "apps": []
-    }
+    # 3. УНИВЕРСАЛЬНЫЙ Формат ESign (esign.json)
+    esign_repo = []
     for app in apps:
-        esign_repo["apps"].append({
+        esign_repo.append({
             "name": app.get("name"),
-            "bundle": app.get("bundle_identifier"),
             "version": app.get("version"),
+            "bundle": app.get("bundle_identifier"),
             "down": app.get("download_url"),
             "icon": app.get("icon_url"),
-            "ver": app.get("version"),
             "desc": app.get("description")
         })
 
