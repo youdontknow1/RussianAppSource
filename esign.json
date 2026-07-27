@@ -1,8 +1,10 @@
 {
-    "name": "Russian App Source",
+    "name": "Sber App Source",
+    "identifier": "com.sberappsource.repo",
+    "description": "Магазин приложений Сбербанк для iOS",
     "apps": [
         {
-            "name": "Сбербанк",
+            "name": "Unknown App",
             "version": "15.7.0",
             "bundle": "ru.sberbank.sberbankonline",
             "down": "https://github.com/youdontknow1/RussianAppSource/releases/download/v1/Online_17.6.1.ipa",

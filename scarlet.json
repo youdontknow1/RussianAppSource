@@ -1,15 +1,15 @@
 {
     "Meta": {
-        "Name": "Russian App Source",
+        "Name": "Sber App Source",
         "Icon": ""
     },
     "Apps": {
-        "Сбербанк": {
+        "null": {
             "BundleID": "ru.sberbank.sberbankonline",
             "Version": "15.7.0",
             "Download": "https://github.com/youdontknow1/RussianAppSource/releases/download/v1/Online_17.6.1.ipa",
             "Icon": "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/sber.png",
-            "Developer": "RussianAppSource",
+            "Developer": "SberAppSource",
             "Description": "Официальное приложение Сбербанк Онлайн для iOS. Актуальная сборка."
         }
     }

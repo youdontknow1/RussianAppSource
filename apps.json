@@ -1,11 +1,11 @@
 {
-    "name": "Russian App Source",
-    "subtitle": "Каталог СНГ приложений",
+    "name": "Sber App Source",
+    "subtitle": "Каталог Сбербанк",
     "apps": [
         {
-            "name": "Сбербанк",
+            "name": null,
             "bundleIdentifier": "ru.sberbank.sberbankonline",
-            "developerName": "RussianAppSource",
+            "developerName": "SberAppSource",
             "version": "15.7.0",
             "versionDate": "2026-07-27",
             "downloadURL": "https://github.com/youdontknow1/RussianAppSource/releases/download/v1/Online_17.6.1.ipa",
