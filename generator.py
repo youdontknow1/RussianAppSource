@@ -5,7 +5,6 @@ import yaml
 def clean_value(val):
     if val is None:
         return ""
-    # Вычищаем абсолютно любой мусор по кавычкам
     s = str(val).strip()
     for bad in ['&quot;', '"', "'"]:
         s = s.replace(bad, '')
@@ -26,25 +25,28 @@ def generate_repos():
                     except Exception as e:
                         print(f"Ошибка чтения файла {filename}: {e}")
 
-    esign_repo = {
-        "name": "Sber App Source",
-        "identifier": "com.sberappsource.repo",
-        "description": "Магазин приложений Сбербанк для iOS",
-        "apps": []
+    # Создаем формат строго под Scarlet
+    scarlet_repo = {
+        "Meta": {
+            "Name": "Russian App Source",
+            "Icon": "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/sber.png"
+        },
+        "Apps": {}
     }
     
     for app in apps:
-        esign_repo["apps"].append({
-            "name": clean_value(app.get("name", "Сбербанк")),
-            "version": clean_value(app.get("version", "15.7.0")),
-            "bundle": clean_value(app.get("bundle_identifier", "ru.sberbank.sberbankonline")),
-            "down": clean_value(app.get("download_url", "")),
-            "icon": clean_value(app.get("icon_url", "")),
-            "desc": clean_value(app.get("description", ""))
-        })
+        name = clean_value(app.get("name", "Сбербанк"))
+        scarlet_repo["Apps"][name] = {
+            "BundleID": clean_value(app.get("bundle_identifier", "ru.sberbank.sberbankonline")),
+            "Version": clean_value(app.get("version", "15.7.0")),
+            "Download": clean_value(app.get("download_url", "")),
+            "Icon": clean_value(app.get("icon_url", "")),
+            "Developer": "SberAppSource",
+            "Description": clean_value(app.get("description", ""))
+        }
 
-    with open('esign.json', 'w', encoding='utf-8') as f:
-        json.dump(esign_repo, f, ensure_ascii=False, indent=4)
+    with open('scarlet.json', 'w', encoding='utf-8') as f:
+        json.dump(scarlet_repo, f, ensure_ascii=False, indent=4)
 
 if __name__ == "__main__":
     generate_repos()
