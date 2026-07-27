@@ -1,0 +1,16 @@
+{
+    "Meta": {
+        "Name": "Russian App Source",
+        "Icon": ""
+    },
+    "Apps": {
+        "Т-Банк": {
+            "BundleID": "com.tbank.iphone",
+            "Version": "15.0.0",
+            "Download": "https://ссылка-на-твое-облако.com/tbank.ipa",
+            "Icon": "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/tbank.png",
+            "Developer": "RussianAppSource",
+            "Description": "Официальное приложение Т-Банка для iOS. Актуальная сборка."
+        }
+    }
+}

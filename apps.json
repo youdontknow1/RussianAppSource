@@ -1,0 +1,17 @@
+{
+    "name": "Russian App Source",
+    "subtitle": "Каталог СНГ приложений",
+    "apps": [
+        {
+            "name": "Т-Банк",
+            "bundleIdentifier": "com.tbank.iphone",
+            "developerName": "RussianAppSource",
+            "version": "15.0.0",
+            "versionDate": "2026-07-27",
+            "downloadURL": "https://ссылка-на-твое-облако.com/tbank.ipa",
+            "iconURL": "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/tbank.png",
+            "subtitle": "Официальное приложение Т-Банка для iOS. Актуальная сборка.",
+            "localizedDescription": "Официальное приложение Т-Банка для iOS. Актуальная сборка."
+        }
+    ]
+}
