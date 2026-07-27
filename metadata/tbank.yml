@@ -1,0 +1,7 @@
+name: "Т-Банк"
+bundle_identifier: "com.tbank.iphone"
+version: "15.0.0"
+version_date: "2026-07-27"
+description: "Официальное приложение Т-Банка для iOS. Актуальная сборка."
+download_url: "https://ссылка-на-твое-облако.com/tbank.ipa"
+icon_url: "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/tbank.png"
