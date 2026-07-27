@@ -10,14 +10,6 @@
             "down": "https://drive.google.com/uc?export=download&id=1ysT6HQOkWG4giO8DOxVs5tHSzWdyBYHR&confirm=t",
             "icon": "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/sber.png",
             "desc": "Официальное приложение Сбербанк Онлайн для iOS. Актуальная сборка."
-        },
-        {
-            "name": "Сбербанк",
-            "version": "17.0.0",
-            "bundle": "ru.sberbank.sberbankonline",
-            "down": "https://drive.google.com/uc?export=download&id=1ysT6HQOkWG4giO8DOxVs5tHSzWdyBYHR&confirm=t",
-            "icon": "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/sber.png",
-            "desc": "Официальное приложение Сбербанк Онлайн для iOS. Актуальная сборка."
         }
     ]
 }
