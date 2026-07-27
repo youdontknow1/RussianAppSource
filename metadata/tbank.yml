@@ -1,6 +1,0 @@
-name: "Сбербанк"
-bundle_identifier: "ru.sberbank.sberbankonline"
-version: "17.0.0"
-description: "Официальное приложение Сбербанк Онлайн для iOS. Актуальная сборка."
-download_url: "https://drive.google.com/uc?export=download&id=1ysT6HQOkWG4giO8DOxVs5tHSzWdyBYHR&confirm=t"
-icon_url: "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/sber.png"
