@@ -1,14 +1,10 @@
-{
-    "name": "Russian App Source",
-    "apps": [
-        {
-            "name": "Т-Банк",
-            "bundle": "com.tbank.iphone",
-            "version": "15.0.0",
-            "down": "https://github.com/youdontknow1/RussianAppSource/releases/download/v1/Online_17.6.1.ipa",
-            "icon": "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/tbank.png",
-            "ver": "15.0.0",
-            "desc": "Официальное приложение Т-Банка для iOS. Актуальная сборка."
-        }
-    ]
-}
+[
+    {
+        "name": "Т-Банк",
+        "version": "15.0.0",
+        "bundle": "com.tbank.iphone",
+        "down": "https://github.com/youdontknow1/RussianAppSource/releases/download/v1/Online_17.6.1.ipa",
+        "icon": "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/tbank.png",
+        "desc": "Официальное приложение Т-Банка для iOS. Актуальная сборка."
+    }
+]
