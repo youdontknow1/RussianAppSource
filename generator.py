@@ -5,8 +5,11 @@ import yaml
 def clean_value(val):
     if val is None:
         return ""
-    # Убираем мусорные кодировки кавычек, если их подставил телефон
-    return str(val).replace('&quot;', '').replace('"', '').strip()
+    # Вычищаем абсолютно любой мусор по кавычкам
+    s = str(val).strip()
+    for bad in ['&quot;', '"', "'"]:
+        s = s.replace(bad, '')
+    return s
 
 def generate_repos():
     apps = []
@@ -23,18 +26,18 @@ def generate_repos():
                     except Exception as e:
                         print(f"Ошибка чтения файла {filename}: {e}")
 
-    # Формат ESign (esign.json)
     esign_repo = {
-        "name": "Russian App Source",
-        "identifier": "com.russianappsource.repo",
-        "description": "Магазин приложений для iOS",
+        "name": "Sber App Source",
+        "identifier": "com.sberappsource.repo",
+        "description": "Магазин приложений Сбербанк для iOS",
         "apps": []
     }
+    
     for app in apps:
         esign_repo["apps"].append({
-            "name": clean_value(app.get("name", "Без названия")),
-            "version": clean_value(app.get("version", "1.0.0")),
-            "bundle": clean_value(app.get("bundle_identifier", "")),
+            "name": clean_value(app.get("name", "Сбербанк")),
+            "version": clean_value(app.get("version", "15.7.0")),
+            "bundle": clean_value(app.get("bundle_identifier", "ru.sberbank.sberbankonline")),
             "down": clean_value(app.get("download_url", "")),
             "icon": clean_value(app.get("icon_url", "")),
             "desc": clean_value(app.get("description", ""))
