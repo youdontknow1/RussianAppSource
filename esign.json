@@ -1,10 +1,13 @@
-[
-    {
-        "name": "Т-Банк",
-        "version": "15.0.0",
-        "bundle": "com.tbank.iphone",
-        "down": "https://github.com/youdontknow1/RussianAppSource/releases/download/v1/Online_17.6.1.ipa",
-        "icon": "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/tbank.png",
-        "desc": "Официальное приложение Т-Банка для iOS. Актуальная сборка."
-    }
-]
+{
+    "name": "Russian App Source",
+    "apps": [
+        {
+            "name": "Сбербанк",
+            "version": "15.7.0",
+            "bundle": "ru.sberbank.sberbankonline",
+            "down": "ВСТАВЬ_СЮДА_СВОЮ_НОВУЮ_ССЫЛКУ_НА_СБЕР_ИЗ_РЕЛИЗОВ",
+            "icon": "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/sber.png",
+            "desc": "Официальное приложение Сбербанк Онлайн для iOS. Актуальная сборка."
+        }
+    ]
+}
