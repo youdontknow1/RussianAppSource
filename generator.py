@@ -51,10 +51,13 @@ def generate_repos():
             "Description": app.get("description")
         }
 
-    # 3. УНИВЕРСАЛЬНЫЙ Формат ESign (esign.json)
-    esign_repo = []
+    # 3. Классический Формат ESign с оберткой репозитория (esign.json)
+    esign_repo = {
+        "name": "Russian App Source",
+        "apps": []
+    }
     for app in apps:
-        esign_repo.append({
+        esign_repo["apps"].append({
             "name": app.get("name"),
             "version": app.get("version"),
             "bundle": app.get("bundle_identifier"),
