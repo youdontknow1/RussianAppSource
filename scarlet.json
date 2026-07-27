@@ -1,7 +1,7 @@
 {
     "meta": {
-        "name": "Sber App Source",
-       
+        "name": "Sber App Source"
+    },
     "apps": [
         {
             "name": "Сбербанк",
