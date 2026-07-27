@@ -1,0 +1,30 @@
+name: Generate Repositories
+
+on:
+  push:
+    paths:
+      - 'metadata/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run Generator Script
+        run: python generator.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add apps.json scarlet.json esign.json
+          git commit -m "Update repository files" || exit 0
+          git push
