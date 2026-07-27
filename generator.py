@@ -16,15 +16,15 @@ def generate_repos():
 
     # 1. Формат AltStore / SideStore (apps.json)
     altstore_repo = {
-        "name": "Russian App Source",
-        "subtitle": "Каталог СНГ приложений",
+        "name": "Sber App Source",
+        "subtitle": "Каталог Сбербанк",
         "apps": []
     }
     for app in apps:
         altstore_repo["apps"].append({
             "name": app.get("name"),
             "bundleIdentifier": app.get("bundle_identifier"),
-            "developerName": "RussianAppSource",
+            "developerName": "SberAppSource",
             "version": app.get("version"),
             "versionDate": app.get("version_date"),
             "downloadURL": app.get("download_url"),
@@ -36,7 +36,7 @@ def generate_repos():
     # 2. Формат Scarlet (scarlet.json)
     scarlet_repo = {
         "Meta": {
-            "Name": "Russian App Source",
+            "Name": "Sber App Source",
             "Icon": ""
         },
         "Apps": {}
@@ -47,23 +47,25 @@ def generate_repos():
             "Version": app.get("version"),
             "Download": app.get("download_url"),
             "Icon": app.get("icon_url"),
-            "Developer": "RussianAppSource",
+            "Developer": "SberAppSource",
             "Description": app.get("description")
         }
 
-    # 3. Классический Формат ESign с оберткой репозитория (esign.json)
+    # 3. Максимально подробный формат ESign (esign.json)
     esign_repo = {
-        "name": "Russian App Source",
+        "name": "Sber App Source",
+        "identifier": "com.sberappsource.repo",
+        "description": "Магазин приложений Сбербанк для iOS",
         "apps": []
     }
     for app in apps:
         esign_repo["apps"].append({
-            "name": app.get("name"),
-            "version": app.get("version"),
-            "bundle": app.get("bundle_identifier"),
-            "down": app.get("download_url"),
-            "icon": app.get("icon_url"),
-            "desc": app.get("description")
+            "name": str(app.get("name", "Unknown App")),
+            "version": str(app.get("version", "1.0.0")),
+            "bundle": str(app.get("bundle_identifier", "")),
+            "down": str(app.get("download_url", "")),
+            "icon": str(app.get("icon_url", "")),
+            "desc": str(app.get("description", ""))
         })
 
     # Записываем готовые файлы в корень репозитория
