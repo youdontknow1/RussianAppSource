@@ -1,8 +1,7 @@
 {
     "meta": {
         "name": "Sber App Source",
-        "icon": "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/sber.png"
-    },
+       
     "apps": [
         {
             "name": "Сбербанк",
