@@ -3,5 +3,5 @@ bundle_identifier: "ru.sberbank.sberbankonline"
 version: "15.7.0"
 version_date: "2026-07-27"
 description: "Официальное приложение Сбербанк Онлайн для iOS. Актуальная сборка."
-download_url: "ВСТАВЬ_СЮДА_СВОЮ_НОВУЮ_ССЫЛКУ_НА_СБЕР_ИЗ_РЕЛИЗОВ"
+download_url: https://github.com/youdontknow1/RussianAppSource/releases/download/v1/Online_17.6.1.ipa
 icon_url: "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/sber.png"
