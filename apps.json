@@ -3,15 +3,15 @@
     "subtitle": "Каталог Сбербанк",
     "apps": [
         {
-            "name": null,
+            "name": "Сбербанк",
             "bundleIdentifier": "ru.sberbank.sberbankonline",
             "developerName": "SberAppSource",
             "version": "15.7.0",
-            "versionDate": "2026-07-27",
+            "versionDate": null,
             "downloadURL": "https://github.com/youdontknow1/RussianAppSource/releases/download/v1/Online_17.6.1.ipa",
             "iconURL": "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/sber.png",
-            "subtitle": "https://github.com/youdontknow1/RussianAppSource/releases/download/v1/Online_17.6.1.ipa",
-            "localizedDescription": "https://github.com/youdontknow1/RussianAppSource/releases/download/v1/Online_17.6.1.ipa"
+            "subtitle": "Официальное приложение Сбербанк Онлайн для iOS. Актуальная сборка.",
+            "localizedDescription": "Официальное приложение Сбербанк Онлайн для iOS. Актуальная сборка."
         }
     ]
 }

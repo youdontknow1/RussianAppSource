@@ -4,12 +4,12 @@
     "description": "Магазин приложений Сбербанк для iOS",
     "apps": [
         {
-            "name": "Unknown App",
+            "name": "Сбербанк",
             "version": "15.7.0",
             "bundle": "ru.sberbank.sberbankonline",
             "down": "https://github.com/youdontknow1/RussianAppSource/releases/download/v1/Online_17.6.1.ipa",
             "icon": "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/sber.png",
-            "desc": "https://github.com/youdontknow1/RussianAppSource/releases/download/v1/Online_17.6.1.ipa"
+            "desc": "Официальное приложение Сбербанк Онлайн для iOS. Актуальная сборка."
         }
     ]
 }
