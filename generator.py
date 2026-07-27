@@ -25,28 +25,64 @@ def generate_repos():
                     except Exception as e:
                         print(f"Ошибка чтения файла {filename}: {e}")
 
-    # Создаем формат строго под Scarlet
+    # Задаем красивую иконку для самого репозитория по умолчанию
+    default_icon = "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/sber.png"
+
+    # 1. Сборка для Скарлет
     scarlet_repo = {
         "Meta": {
             "Name": "Russian App Source",
-            "Icon": "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/sber.png"
+            "Icon": default_icon
         },
         "Apps": {}
     }
     
+    # 2. Сборка для E-Sign
+    esign_repo = {
+        "name": "Russian App Source",
+        "identifier": "com.sberappsource.repo",
+        "description": "Магазин приложений для iOS",
+        "apps": []
+    }
+
     for app in apps:
         name = clean_value(app.get("name", "Сбербанк"))
+        bundle = clean_value(app.get("bundle_identifier", "ru.sberbank.sberbankonline"))
+        version = clean_value(app.get("version", "15.7.0"))
+        down = clean_value(app.get("download_url", ""))
+        
+        # Если у приложения нет иконки, ставим дефолтную
+        icon = clean_value(app.get("icon_url", ""))
+        if not icon:
+            icon = default_icon
+            
+        desc = clean_value(app.get("description", ""))
+
+        # Пишем в Скарлет
         scarlet_repo["Apps"][name] = {
-            "BundleID": clean_value(app.get("bundle_identifier", "ru.sberbank.sberbankonline")),
-            "Version": clean_value(app.get("version", "15.7.0")),
-            "Download": clean_value(app.get("download_url", "")),
-            "Icon": clean_value(app.get("icon_url", "")),
+            "BundleID": bundle,
+            "Version": version,
+            "Download": down,
+            "Icon": icon,
             "Developer": "SberAppSource",
-            "Description": clean_value(app.get("description", ""))
+            "Description": desc
         }
+
+        # Пишем в E-Sign
+        esign_repo["apps"].append({
+            "name": name,
+            "version": version,
+            "bundle": bundle,
+            "down": down,
+            "icon": icon,
+            "desc": desc
+        })
 
     with open('scarlet.json', 'w', encoding='utf-8') as f:
         json.dump(scarlet_repo, f, ensure_ascii=False, indent=4)
+
+    with open('esign.json', 'w', encoding='utf-8') as f:
+        json.dump(esign_repo, f, ensure_ascii=False, indent=4)
 
 if __name__ == "__main__":
     generate_repos()
