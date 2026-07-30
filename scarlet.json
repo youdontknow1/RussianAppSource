@@ -7,7 +7,7 @@
             "name": "Сбербанк",
             "bundleID": "ru.sberbank.sberbankonline",
             "version": "17.0.0",
-            "download": "https://drive.google.com/uc?export=download&id=1ysT6HQOkWG4giO8DOxVs5tHSzWdyBYHR&confirm=t",
+            "download": "https://downloader.disk.yandex.ru/disk/9ba3a789617267f8fb2fa75389659b8d9633de02ad0db6d73ad7d812ceb9021a/69450a8a/D4_V2rR1dE9x6zU4k0Vw6Bv43tB3V0RldW5pX0RpbWE=?uid=0&filename=Online%20%5Bv17.0.0%5D.ipa&disposition=attachment&hash=&limit=0&content_type=application%2Fx-ios-device-app&owner_uid=0&fsize=324009874&hid=8df5702209bb4510adcc7bce6d790403&media_type=development&tknv=v2",
             "icon": "https://raw.githubusercontent.com/youdontknow1/RussianAppSource/main/icons/sber.png",
             "developer": "Sber",
             "description": "Официальное приложение Сбербанк Онлайн для iOS. Актуальная сборка."
